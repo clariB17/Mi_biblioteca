@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
+
+    <!-- Link de estilos -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>{% block titLe %} Mi Libreria {% endblock %}</title>
+</head>
+<body>
+    <nav class="uk-navbar-container uk-animation-fade" tabindex="0" uk-navbar>
+        <div class="uk-navbar-left uk-margin-medium-left uk-">
+            <a class="uk-navbar-item uk-logo uk-box-shadow-hover-large" href="{{url_for('home')}}"><img src="{{url_for('static', filename='images/books_icon.png')}}" uk-logo height="50" width="50"  ></a>
+        </div>
+        <div class="uk-navbar-right ">
+            <div class="uk-navbar-item">
+                <div>Buscar lista de <a href="{{url_for('mostrarLibros')}}">Libros</a></div>
+            </div>
+    
+            <div class="uk-navbar-item">
+                <div class="uk-margin">
+                    <form class="uk-search uk-search-default">
+                        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                        <input class="uk-search-input" type="search" placeholder="Buscar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+{% block contenido %}
+<h3 class="uk-text-center">MI BIBLIOTECA</h3>
+    <div class="uk-text-center uk-margin-large uk-padding-margin-top uk-margin-remove-top" uk-grid>
+        <div class="uk-width-expand@m uk-divider-vertical">
+            <div class="uk-card uk-card-default">
+                <img src="{{url_for('static', filename='images/light.jpg')}}" alt="" class="uk-height-max-large uk-align-right uk-margin-remove-adjacent" uk-img>
+                <h3 class="uk-card-title uk-margin-xlarge-top uk-padding-small">Bienvenido a Mi Biblioteca</h3>
+                <p class="uk-text-large uk-text-lighter uk-text-justify uk-margin uk-padding uk-visible@m">Mi biblioteca es una página que te ayuda a seguir el registro de los libros que tenes, de los que queres tener, o de lo que vos desees. Si todavía no sos usuario de Mi Biblioteca y queres organizar tus libros puedes crearte un usuario gratis! Espero que disfrutes la pagina!</p>
+            </div>
+        </div>
+        <div class="uk-width-auto@m uk-margin-right">
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-vertical-align uk-text-center">
+                    <div class="uk-vertical-align-middle" style="width: 250px;">  
+                        <img class="uk-margin" width="140" height="120" src="{{url_for('static', filename='images/avatar.jpg')}}" alt="">
+                        <form class="uk-panel uk-panel-box uk-form uk-border-rounded">
+                            <div class="uk-form-row uk-border-rounded">
+                                <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Usuario">
+                            </div>
+                            <div class="uk-form-row uk-border-rounded">
+                                <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Constraseña">
+                            </div>
+                            <div class="uk-form-row uk-border-rounded">
+                                <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="{{url_for('mostrarLibros')}}">Iniciar sesión</a>
+                            </div>
+                            <div class="uk-form-row uk-text-small uk-border-rounded uk-margin-small-top">
+                                <label class="uk-float-left"><input type="checkbox"> Mantener la sesión iniciada</label>
+                                <a class="uk-float-right uk-link uk-link-muted uk-margin-remove-bottom uk-padding-remove-bottom" href="#">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+{% endblock %}
+
+    <!--footer-->
+    <div class="uk-position-bottom uk-flex-last\@m ">
+        <footer class="uk-position-bottom uk-margin-remove-bottom uk-nav-center uk-margin-xlarge-top" >
+            <div>
+                <a href="https://www.instagram.com" class="uk-icon-button" uk-icon="instagram"></a>
+                <a href="https://web.whatsapp.com/" class="uk-icon-button" uk-icon="whatsapp"></a>
+                <a href="https://twitter.com/?lang=es" class="uk-icon-button" uk-icon="twitter"></a>
+                <a href="https://www.facebook.com/" class="uk-icon-button" uk-icon="facebook"></a>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="uk-background-secondary uk-margin-remove-bottom">  
+                © 2020 Copyright:
+                <a class="text-white uk-link-muted" href="{{url_for('home')}}">mi-libreria.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+    </div>
+
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+ 
+    
+</body>
+</html>
