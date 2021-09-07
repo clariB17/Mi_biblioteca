@@ -1,0 +1,63 @@
+En eliminar libros cuando ponemos cancelar no se cancela se elimina de todos modos
+
+En app.py: 
+        se llama a la basse de datos en la linea 10
+        desde la linea 19 se marca la ruta para mostrar todos los libros de la base de datos con algunas columnas
+        desde la linea 26 llama a los metodos get y post que sirven para agregar mas libros a la base de daros o editarlos
+        la inea 53 es para eliminar los libros
+        desde la linea 67 empiezan las funciones de flask las def
+        70 def obtener libros
+        75 def obtener libro
+        80 def crear libro
+        87 def actializar libro 
+        100 def eliminar libro
+
+En sql_string.py 
+        Se agregan filas a las tablass de la base de datos 
+        y se colocacel cursor en la ultima 
+
+
+En database_setup.py
+        En este archibo cre crea la base de datos con sus tablas 
+        la clase libro tiene la tabla id, titulo, autor, genero 
+        en la linea 38 creo q crea un espacio al final de la fila para seguir creando 
+
+En populate.py
+        importa la base de datos 
+        linea 9 crea una ruta para acceder a la base de datos
+        crea
+        lee
+        actualiza
+        elimina
+    
+En libros.html
+        es el index de la pagina
+        en el head
+            esta el estilo que marca que es una tabla con th comlumnas td relleno de columnas
+        en el body 
+            esta el titulo de la tabla
+            la cabecera de la tabla
+            los datos editar y eliminar dento de cada fila
+            la opcion de agregar un libro
+        
+En nuevoLibro.html
+        se llama al metodo post para agregar libros
+        muestra un espacio para agregar nombre en la tabla que se llama "Titulo" es de tipo texto y puede entrar hasta 100 caracteres
+        muesta otro espacio para autor
+        y otro para genero
+
+        termina con un boton del submit para guardar los daros 
+
+En eliminarLibro.html
+        Aparece un cartel de seguro que desea eliminar
+        y dos botones Eliminar o cancelar (funciona mal que se elimina de todos modos)
+
+En editarLibro.html
+        para la accion editiar llama el id del libro q se quiere editar  y te muesta las etiqueras titulo para cambiar 
+        despues el imput
+        y al final un boton de guardar que te manda a mostrarLibros.html
+        y otri de cancelar 
+
+    
+
+

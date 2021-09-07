@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+{% block title %} Nuevo Libro {% endblock %}
+{% block contenido %}
+<div class="uk-container uk-flex-center uk-align-center">
+    <h1 class="uk-text-center uk-margin-medium ">Agregar un Libro</h1>
+    <form  action="#" method="post" class="uk-form-horizontal uk-margin-large">
+        <div class="uk-margin">
+            <label class="uk-form-label" for="nombre">Titulo:</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="nombre" type="text" maxlength="100" name="nombre" placeholder="Nombre del Libro">
+            </div>
+        </div>
+        <div class="uk-margin-medium">
+            <label class="uk-form-label" for="autor">Autor:</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" maxlength="100" name="autor" placeholder="Autor del Libro">
+            </div>
+        </div>
+        <div class="uk-margin-medium ">
+            <label class="uk-form-label" for="genero">Genero:</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" maxlength="100" name="genero" placeholder="Genero del Libro">
+            </div>
+        </div>
+        <div class="uk-width-expand uk-margin-large-top ">
+            <button type="submit" class="verde uk-width-expand uk-margin uk-padding-small uk-border-rounded ">Guardar</button>
+        </div>
+    </form>
+    
+</div>
+{% endblock %}
+
+<form  action="#" method="post" class="uk-form-horizontal uk-margin-large">
+
+    <div class="uk-margin">
+        <label class="uk-form-label" for="nombre">Titulo:</label>
+        <div class="uk-form-controls">
+            <input class="uk-input" id="nombre" type="text" maxlength="100" name="nombre" placeholder="Nombre del Libro">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <label class="uk-form-label" for="autor">Autor:</label>
+        <div class="uk-form-controls">
+            <input class="uk-input" maxlength="100" name="autor" placeholder="Autor del Libro">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <label class="uk-form-label" for="genero">Genero:</label>
+        <div class="uk-form-controls">
+            <input class="uk-input" maxlength="100" name="genero" placeholder="Genero del Libro">
+        </div>
+    </div>
+    <div class="">
+        <button type="submit" class="verde">Guardar</button>
+    </div>
+</form>
