@@ -23,3 +23,23 @@ body {
 .fondo{
     background-color:rgb(201, 192, 192) ;    
 }
+.gris{
+    border: black 3px solid;
+    background-color: rgb(168, 204, 240);
+}
+.textol a:hover{
+    background-color: rgb(119, 178, 236);
+    text-decoration-color: black;
+}
+
+.editar a:hover{
+    color: blue;
+}
+.borrar a:hover{
+    color: red;
+}
+.texto{
+    text-decoration-color: black;
+    text-decoration-thickness:inherit;
+
+}
