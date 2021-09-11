@@ -50,7 +50,7 @@ def editarLibro(libro_id):
             libroEditado.titulo = request.form['nombre']
             libroEditado.genero = request.form['genero']
             libroEditado.autor = request.form['autor']
-
+            session.commit() 
             return redirect(url_for('mostrarLibros'))
 
     else:
