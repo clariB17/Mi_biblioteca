@@ -24,22 +24,24 @@ body {
     background-color:rgb(201, 192, 192) ;    
 }
 .gris{
-    border: black 3px solid;
-    background-color: rgb(168, 204, 240);
+    border: black 1px solid;
+    background-color: rgb(168, 240, 174);
 }
 .textol a:hover{
-    background-color: rgb(119, 178, 236);
-    text-decoration-color: black;
+    background-color: rgb(158, 231, 140);
+    text-decoration:none;
+    color: black;
 }
 
 .editar a:hover{
     color: blue;
+
 }
 .borrar a:hover{
     color: red;
 }
 .texto{
-    text-decoration-color: black;
-    text-decoration-thickness:inherit;
-
+    color: black;
+    text-decoration: none;
+    
 }
